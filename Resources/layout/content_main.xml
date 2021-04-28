@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="Your Car  "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:gravity="left|center_vertical"
+            android:foregroundGravity="left" />
+        <Button
+            android:id="@+id/btnAllCars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All cars"
+            android:foregroundGravity="right"
+            android:gravity="center_vertical|right" />
+        </LinearLayout>
+    
+    <EditText  
+        android:hint="Enter Brand"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/edtName"/>  
+    <EditText  
+        android:hint="Enter BodyType"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/edtDepart" />  
+    <EditText  
+        android:hint="Enter Color"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/edtEmail"/>
+    <EditText  
+        android:hint="Enter V of Engine"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/VEngine"/> 
+    <EditText  
+        android:hint="Enter car price"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:id="@+id/Price"/> 
+    <LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"/>  
+        <Button  
+            android:id="@+id/btnEdit"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="Update" />  
+        <Button  
+            android:id="@+id/btnRemove"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="Remove"/>
+        <Button
+            android:text="Quary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnQuary" />  
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="Average V of engine: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+        <TextView
+            android:text=" "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AverageVEngine"/>
+        <Button
+            android:id="@+id/btnAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"/>
+    </LinearLayout>
+    
+    <ListView  
+        android:minWidth="25px"  
+        android:minHeight="25px"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:id="@+id/listView"/>  
+
+</LinearLayout>
