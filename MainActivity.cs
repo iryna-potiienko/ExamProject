@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Android;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -193,7 +194,8 @@ namespace CarsDatabase
 
             if (id == Resource.Id.nav_camera)
             {
-                // Handle the camera action
+                var intent = new Intent(this, typeof(ContactsActivity));
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_gallery)
             {
