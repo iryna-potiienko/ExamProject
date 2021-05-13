@@ -5,8 +5,6 @@ using Android.Content;
 using Android.App;
 using Android.Provider;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
 using Android.Database;
 
 namespace CarsDatabase
@@ -120,20 +118,6 @@ namespace CarsDatabase
                     }
                 } while (cursor.MoveToNext());
             }
-            
-            
-           /* Cursor cursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,null, null, null, null); 
-            while (cursor.moveToNext()) { 
-                String contactId = cursor.getString(cursor.getColumnIndex( 
-                    ContactsContract.Contacts._ID)); 
-                String hasPhone = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER)); 
-
-            if (Boolean.parseBoolean(hasPhone)) { 
-                // You know it has a number so now query it like this
-                Cursor phones = getContentResolver().query( ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.Number.EndsWith("07") +" = "+ true, null, null); 
-                while (phones.moveToNext()) { 
-                    String phoneNumber = phones.getString(phones.getColumnIndex( ContactsContract.CommonDataKinds.Phone.NUMBER));                 
-                } */
         }
 
         public void FillContactsEnds7()

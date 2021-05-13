@@ -1,8 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
+    
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+    
     <TextView
             android:text="Contacts Book"
             android:layout_width="match_parent"
@@ -15,23 +30,7 @@
             android:layout_height="wrap_content" android:id="@+id/textView3"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textAlignment="center"
             android:textAllCaps="false"/>
-    <LinearLayout
-            android:orientation="horizontal"
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content">
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/NumbersEnds7"
-                android:text="Numbers ends 7" android:gravity="center|left" android:layout_margin="20px">
-        </Button>
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/NumbersAll"
-                android:text="All Numbers" android:gravity="center|right"
-                android:layout_marginLeft="100px" android:layout_margin="20px">
-
-        </Button>
-    </LinearLayout>
+    
     <ListView android:id="@+id/ContactsListView"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent" />

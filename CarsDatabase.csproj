@@ -61,6 +61,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutMe.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactsActivity.cs" />
     <Compile Include="ContactsAdapter.cs" />
@@ -80,6 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ContactImage.png" />
+    <AndroidResource Include="Resources\drawable\linkedIn.jpg" />
+    <AndroidResource Include="Resources\drawable\outline_map_24.xml" />
+    <AndroidResource Include="Resources\drawable\outline_person_24.xml" />
+    <AndroidResource Include="Resources\layout\AboutMe.xml" />
     <AndroidResource Include="Resources\layout\activity_main.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
