@@ -11,6 +11,7 @@ namespace CarsDatabase
         protected override void OnCreate (Bundle bundle)
         {
             base.OnCreate (bundle);
+            Xamarin.Essentials.Platform.Init(this, bundle);
 
             SetContentView (Resource.Layout.contacts_view);
             
@@ -32,6 +33,12 @@ namespace CarsDatabase
                 contactsAdapter.FillContactsEnds7();
                 //contactsListView.UpdateViewLayout(contactsAdapter.GetView());
             };
+        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

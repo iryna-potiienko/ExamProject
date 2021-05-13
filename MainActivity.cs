@@ -199,7 +199,8 @@ namespace CarsDatabase
             }
             else if (id == Resource.Id.nav_gallery)
             {
-
+                var intent = new Intent(this, typeof(MapsActivity));
+                StartActivity(intent);
             }
             else if (id == Resource.Id.nav_slideshow)
             {
