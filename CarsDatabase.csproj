@@ -65,6 +65,7 @@
     <Compile Include="ContactsActivity.cs" />
     <Compile Include="ContactsAdapter.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="GoogleDirectionsClass.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Car.cs" />
@@ -130,6 +131,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="gmaps-api-net" Version="0.32.0" />
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
     </PackageReference>

@@ -74,6 +74,10 @@
               "target": "Package",
               "version": "[117.0.0, )"
             },
+            "gmaps-api-net": {
+              "target": "Package",
+              "version": "[0.32.0, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.7.335, )"

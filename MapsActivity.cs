@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Gms.Maps;
@@ -9,10 +10,10 @@ using Android.OS;
 using Android.Locations;
 using Android.Widget;
 using Java.Lang;
+using Newtonsoft.Json;
 using Xamarin.Essentials;
 using Exception = System.Exception;
 using Location = Android.Locations.Location;
-//using GoogleMapsAPI.NET.API.Client;
 
 namespace CarsDatabase
 {
@@ -30,8 +31,6 @@ namespace CarsDatabase
         private Marker destinationMarker;
         double latitudine; //latitude for the method UpdateLocation()
         double longitudine; //longitude for the method UpdateLocation()
-        //double lat_s; //variable for take the latitude of the service
-        //double lon_s; //variable for take the longitude of the service
         LocationManager locationManager; //Location Manager
         string locationProvider = string.Empty; //Location Provider
 
@@ -42,10 +41,6 @@ namespace CarsDatabase
 
             // Create your application here
             SetContentView(Resource.Layout.maps_view);
-
-            //take arguments from the previous activity, that are the latitude and longitude of the choosen service
-            //lat_s = Intent.Extras.GetDouble("Latitude");
-            //lon_s = Intent.Extras.GetDouble("Longitude");
 
             //Set up the map
             SetUpMap();
@@ -108,7 +103,7 @@ namespace CarsDatabase
                             marker1 = null;
                         }
 
-                        marker1 = eMap.AddMarker(new MarkerOptions().SetPosition(latlng).SetTitle("UpdateLocation")
+                        marker1 = eMap.AddMarker(new MarkerOptions().SetPosition(latlng).SetTitle("My location")
                             .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueCyan)));
                         //eMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(latlng2, 15.7F));
                     }
@@ -134,45 +129,24 @@ namespace CarsDatabase
         {
             if (eMap == null)
             {
-                /*var mapFrag = MapFragment.NewInstance();
-                activity.FragmentManager.BeginTransaction()
-                    .Add(Resource.Id.map_container, mapFrag, "map_fragment")
-                    .Commit();*/
-                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
+	            FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
         }
 
         public void OnMapReady(GoogleMap googleMap)
         {
             eMap = googleMap;
-            //latitude and longitude of the service taken from the previous activity
-           /* _latlngService = new LatLng(lat_s, lon_s);
-
-            //service marker
-            MarkerOptions options1 = new MarkerOptions()
-                .SetPosition(_latlngService)
-                .SetTitle("Your Service is here")
-                .SetIcon(BitmapDescriptorFactory.DefaultMarker());
-            eMap.AddMarker(options1);*/
-
+            
             //CDN's center
-            latlng2 = new LatLng(50.381,  30.495);
+            latlng2 = new LatLng(50.484001, 30.636866);
 
-            //img overlay
-            /*GroundOverlayOptions groundOverlayOptions = new GroundOverlayOptions();
-            BitmapDescriptor marker = BitmapDescriptorFactory.DefaultMarker();
-            groundOverlayOptions.InvokeImage(image);
-            groundOverlayOptions.Position(latlng2, 725, 450);
-            groundOverlayOptions.InvokeBearing(-7.70F);
-            eMap.AddGroundOverlay(groundOverlayOptions);*/
-
-           var marker = eMap.AddMarker(new MarkerOptions().SetPosition(latlng2).SetTitle("Center")
-                .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueViolet)));
+            //var marker = eMap.AddMarker(new MarkerOptions().SetPosition(latlng2).SetTitle("Center")
+             //   .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueViolet)));
             
             //Set the firt view of the CDN
             CameraPosition INIT = new CameraPosition.Builder()
                 .Target(latlng2)
-                .Zoom(14.2F)
+                .Zoom(13.2F)
                 .Bearing(82F)
                 .Build();
 
@@ -191,41 +165,33 @@ namespace CarsDatabase
         {
         }
 
-        async void Geocode(string address)
+        async void BuildPath(string address)
         {
             try
             {
-                //destinationMarker.Remove(); //= new Marker();
-                //var address1 =  "Microsoft Building 25 Redmond WA USA";
+	            eMap.Clear();
+	            marker1 = eMap.AddMarker(new MarkerOptions().SetPosition(latlng).SetTitle("My location")
+		            .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueCyan)));
+	            
                 var locations = await Geocoding.GetLocationsAsync(address);
 
                 var location = locations?.FirstOrDefault();
-                //if (location != null)
-                //{
-                    //Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                    Toast.MakeText(ApplicationContext,
-                        string.Format("Latitude: {0}, Longitude: {1}", location.Latitude, location.Longitude),
-                        ToastLength.Long).Show();
-               // }
+                
+                    //Toast.MakeText(ApplicationContext,
+                   //     string.Format("Latitude: {0}, Longitude: {1}", location.Latitude, location.Longitude),ToastLength.Long).Show();
 
-               var pointCoordinates = new LatLng(location.Latitude,
-                   location.Longitude);
+               var pointCoordinates = new LatLng(location.Latitude, location.Longitude);
                destinationMarker = eMap.AddMarker(new MarkerOptions().SetPosition(pointCoordinates).SetTitle("Destination point")
                    .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueRed)));
-               //var client = new MapsAPIClient("AIzaSyBfckBchOpn-lM4oJ9V9nBDBZmmlousIRQ");
-               //var geocodeResult = client.Geocoding.Geocode(brokerModel.Adress).Results.FirstOrDefault().Geometry.Location;
-               //var geocodeResult = Geocoding.Geocode("1600 Amphitheatre Parkway, Mountain View, CA");
-
-               //var geocoder = new Geocoder(this);
-               //IList<Address> addressList = await geocoder.GetFromLocationNameAsync(address1,1);
-               //Address address = addressList.FirstOrDefault();
                
-                //return location;
+               string strGoogleDirectionUrlConstraction="https://maps.googleapis.com/maps/api/directions/json?origin={0},{1}&destination={2},{3}&key=AIzaSyCBOeufwGrgYNWxv84GZY5UM59jkX1xtYQ";
+               var strGoogleDirectionUrl = string.Format(strGoogleDirectionUrlConstraction, latlng.Latitude, latlng.Longitude, 
+	               location.Latitude, location.Longitude);
+               string strJSONDirectionResponse = await FnHttpRequest(strGoogleDirectionUrl);
+               
+               FnUpdateCameraPosition(pointCoordinates);
+               FnSetDirectionQuery ( strJSONDirectionResponse );
             }
-            /*catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature not supported on device
-            }*/
             catch (Exception ex)
             {
                 // Handle exception that may have occurred in geocoding
@@ -238,27 +204,14 @@ namespace CarsDatabase
 
         void recentre_Click(object sender, EventArgs e)
         {
-            CameraUpdate camera = CameraUpdateFactory.NewLatLngZoom(latlng2, 16.2F);
+            CameraUpdate camera = CameraUpdateFactory.NewLatLngZoom(latlng2, 13.2F);
             eMap.MoveCamera(camera);
-        }
-
-        void calculate_Route()
-        {
-
         }
 
         void route_Click(object sender, EventArgs e)
         {
             string destinationPointName = destinationPoint.Text;
-            //var destinationPointResult = 
-                Geocode(destinationPointName);
-
-            /*var pointCoordinates = new LatLng(destinationPointResult.Result.Latitude,
-                destinationPointResult.Result.Longitude);
-            var marker = eMap.AddMarker(new MarkerOptions().SetPosition(pointCoordinates).SetTitle("Destination point")
-                .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueRed)));
-            */
-            calculate_Route();
+            BuildPath(destinationPointName);
         }
         
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
@@ -267,6 +220,143 @@ namespace CarsDatabase
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+        
+		void FnSetDirectionQuery(string strJSONDirectionResponse)
+		{
+			var objRoutes = JsonConvert.DeserializeObject<GoogleDirectionClass> ( strJSONDirectionResponse );  
+			//objRoutes.routes.Count  --may be more then one 
+			if ( objRoutes.routes.Count > 0 )
+			{
+				string encodedPoints =	objRoutes.routes [0].overview_polyline.points; 
+
+				var lstDecodedPoints =	FnDecodePolylinePoints ( encodedPoints ); 
+				//convert list of location point to array of latlng type
+				var latLngPoints = new LatLng[lstDecodedPoints.Count]; 
+				int index = 0;
+				foreach ( var loc in lstDecodedPoints )
+				{
+					latLngPoints[index++] = loc; //new LatLng ( loc.Latitude , loc.Longitude );
+				}
+
+				var polylineoption = new PolylineOptions (); 
+				polylineoption.InvokeColor ( Android.Graphics.Color.Green );
+				polylineoption.Geodesic ( true );
+				polylineoption.Add ( latLngPoints ); 
+				RunOnUiThread ( () =>
+				eMap.AddPolyline ( polylineoption ) ); 
+			}
+		}
+
+		List<LatLng> FnDecodePolylinePoints(string encodedPoints) 
+		{
+			if ( string.IsNullOrEmpty ( encodedPoints ) )
+				return null;
+			var poly = new List<LatLng>();
+			char[] polylinechars = encodedPoints.ToCharArray();
+			int index = 0;
+
+			int currentLat = 0;
+			int currentLng = 0;
+			int next5bits;
+			int sum;
+			int shifter;
+
+			try
+			{
+				while (index < polylinechars.Length)
+				{
+					// calculate next latitude
+					sum = 0;
+					shifter = 0;
+					do
+					{
+						next5bits = (int)polylinechars[index++] - 63;
+						sum |= (next5bits & 31) << shifter;
+						shifter += 5;
+					} while (next5bits >= 32 && index < polylinechars.Length);
+
+					if (index >= polylinechars.Length)
+						break;
+
+					currentLat += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
+
+					//calculate next longitude
+					sum = 0;
+					shifter = 0;
+					do
+					{
+						next5bits = (int)polylinechars[index++] - 63;
+						sum |= (next5bits & 31) << shifter;
+						shifter += 5;
+					} while (next5bits >= 32 && index < polylinechars.Length);
+
+					if (index >= polylinechars.Length && next5bits >= 32)
+						break;
+
+					currentLng += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
+					
+					var lat = Convert.ToDouble(currentLat) / 100000.0;
+					var lng = Convert.ToDouble(currentLng) / 100000.0;
+					LatLng p = new LatLng(lat, lng);
+					poly.Add(p);
+				} 
+			}
+			catch 
+			{
+				//RunOnUiThread ( () =>
+				//	Toast.MakeText ( this , Constants.strPleaseWait , ToastLength.Short ).Show () ); 
+			}
+			return poly;
+		}
+
+		
+		
+		void FnUpdateCameraPosition(LatLng pos)
+		{
+			try
+			{
+				CameraPosition.Builder builder = CameraPosition.InvokeBuilder(); 
+				builder.Target(pos);
+				builder.Zoom(12);
+				builder.Bearing(45);
+				builder.Tilt(10);
+				CameraPosition cameraPosition = builder.Build(); 
+				CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition); 
+				eMap.AnimateCamera(cameraUpdate);
+			}
+			catch( Exception e)
+			{
+				Console.WriteLine ( e.Message );
+
+			}
+		}
+
+		WebClient webclient;
+		async Task<string> FnHttpRequest(string strUri)
+		{ 
+			webclient = new WebClient ();
+			string strResultData;
+			try
+			{
+				strResultData= await webclient.DownloadStringTaskAsync (new Uri(strUri));
+				Console.WriteLine(strResultData);
+			}
+			catch
+			{
+				//strResultData = Constants.strException;
+				strResultData = "Exeption!";
+			}
+			finally
+			{
+				if ( webclient!=null )
+				{
+					webclient.Dispose ();
+					webclient = null; 
+				}
+			}
+
+			return strResultData;
+		}
     }
 
 }
