@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tUFFA/Ir9WsFOPVwayUyk9VmoMgDYP731pxJBYtWTiVTNcz97pdL8Dyqe7Kt1q0KtJh9KjCpBuBF5gsukrBACg==",
+  "dgSpecHash": "l4uxmB7u4qX6xK6l+kl5out//i9yOV5O1NgOOfkhUVFhrVeQnQCmNAGDndQHM+HB+N5ukVZjAL20hBj5ZST2jg==",
   "success": true,
-  "projectFilePath": "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj",
+  "projectFilePath": "D:\\Mobile Development\\Exam\\Labs\\ExamProject\\ExamProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iryna\\.nuget\\packages\\gmaps-api-net\\0.32.0\\gmaps-api-net.0.32.0.nupkg.sha512",
     "C:\\Users\\iryna\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
@@ -15,6 +15,11 @@
     "C:\\Users\\iryna\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
     "C:\\Users\\iryna\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.3\\sqlitepclraw.lib.e_sqlite3.android.2.0.3.nupkg.sha512",
     "C:\\Users\\iryna\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
+    "C:\\Users\\iryna\\.nuget\\packages\\syncfusion.licensing\\19.1.0.66\\syncfusion.licensing.19.1.0.66.nupkg.sha512",
+    "C:\\Users\\iryna\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\19.1.0.66\\syncfusion.xamarin.gridcommon.19.1.0.66.nupkg.sha512",
+    "C:\\Users\\iryna\\.nuget\\packages\\syncfusion.xamarin.sfchart.android\\19.1.0.66\\syncfusion.xamarin.sfchart.android.19.1.0.66.nupkg.sha512",
+    "C:\\Users\\iryna\\.nuget\\packages\\syncfusion.xamarin.sfdatagrid.android\\19.1.0.66\\syncfusion.xamarin.sfdatagrid.android.19.1.0.66.nupkg.sha512",
+    "C:\\Users\\iryna\\.nuget\\packages\\syncfusion.xamarin.sfnumerictextbox.android\\19.1.0.66\\syncfusion.xamarin.sfnumerictextbox.android.19.1.0.66.nupkg.sha512",
     "C:\\Users\\iryna\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\iryna\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\iryna\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

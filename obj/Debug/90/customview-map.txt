@@ -1,0 +1,156 @@
+@string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_main.xml
+adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
+adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+alpha;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_fade_in.xml
+alpha;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_fade_out.xml
+androidx.appcompat.widget.Toolbar;obj\Debug\90\res\layout\app_bar_main.xml
+androidx.cardview.widget.CardView;obj\Debug\90\res\layout\helpview.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;obj\Debug\90\res\layout\app_bar_main.xml
+androidx.drawerlayout.widget.DrawerLayout;obj\Debug\90\res\layout\activity_main.xml
+androidx.recyclerview.widget.RecyclerView;obj\Debug\90\res\layout\help.xml
+attr;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\values\attrs.xml
+attr;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\values\attrs.xml
+attr;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\4\jl\res\values\attrs.xml
+background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
+background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+Button;obj\Debug\90\res\layout\content_main.xml
+Button;obj\Debug\90\res\layout\equation_calculator.xml
+Button;obj\Debug\90\res\layout\maps_view.xml
+cache-path;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\49\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\Debug\90\res\values\colors.xml
+color;obj\Debug\90\res\values\ic_launcher_background.xml
+com.google.android.gms.maps.MapFragment;obj\Debug\90\res\layout\map.xml
+com.google.android.material.appbar.AppBarLayout;obj\Debug\90\res\layout\app_bar_main.xml
+com.google.android.material.navigation.NavigationView;obj\Debug\90\res\layout\activity_main.xml
+Com.Syncfusion.Charts.ChartAnnotationRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.ChartAxisRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.ChartBehaviorRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+com.syncfusion.charts.ChartLegendIconView;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend_item.xml
+com.syncfusion.charts.ChartLegendItemsLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend.xml
+Com.Syncfusion.Charts.ChartLegendLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+com.syncfusion.charts.ChartLegendScrollView;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend.xml
+com.syncfusion.charts.ChartLegendTitleView;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend.xml
+Com.Syncfusion.Charts.ChartRootLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.ChartStripLinesRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.ChartTitle;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.GridLinesRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.SeriesRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Charts.TechnicalIndicatorRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+Com.Syncfusion.Rangenavigator.GridLinesRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\range_navigator_layout.xml
+Com.Syncfusion.Rangenavigator.LabelsRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\range_navigator_layout.xml
+Com.Syncfusion.Rangenavigator.ThumbRenderer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\range_navigator_layout.xml
+declare-styleable;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\values\attrs.xml
+declare-styleable;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\values\attrs.xml
+declare-styleable;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\4\jl\res\values\attrs.xml
+dimen;obj\Debug\90\res\values\dimens.xml
+EditText;obj\Debug\90\res\layout\content_main.xml
+EditText;obj\Debug\90\res\layout\equation_calculator.xml
+EditText;obj\Debug\90\res\layout\maps_view.xml
+enum;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\values\attrs.xml
+enum;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\values\attrs.xml
+enum;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\4\jl\res\values\attrs.xml
+external-cache-path;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\49\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\49\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
+foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+fragment;obj\Debug\90\res\layout\map.xml
+FrameLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_layout.xml
+FrameLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\range_navigator_layout.xml
+FrameLayout;obj\Debug\90\res\layout\helpview.xml
+gradient;obj\Debug\90\res\drawable\side_nav_bar.xml
+group;obj\Debug\90\res\menu\activity_main_drawer.xml
+HorizontalScrollView;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend.xml
+ImageView;obj\Debug\90\res\layout\aboutme.xml
+ImageView;obj\Debug\90\res\layout\contactlistitem.xml
+ImageView;obj\Debug\90\res\layout\helpview.xml
+ImageView;obj\Debug\90\res\layout\nav_header_main.xml
+include;obj\Debug\90\res\layout\activity_main.xml
+include;obj\Debug\90\res\layout\app_bar_main.xml
+include;obj\Debug\90\res\layout\maps_view.xml
+item;obj\Debug\90\res\menu\activity_main_drawer.xml
+item;obj\Debug\90\res\menu\menu_main.xml
+item;obj\Debug\90\res\values\drawables.xml
+item;obj\Debug\90\res\values\strings.xml
+item;obj\Debug\90\res\values\styles.xml
+item;obj\Debug\90\res\values-v21\styles.xml
+LinearLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend.xml
+LinearLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend_item.xml
+LinearLayout;obj\Debug\90\res\layout\aboutme.xml
+LinearLayout;obj\Debug\90\res\layout\contactlistitem.xml
+LinearLayout;obj\Debug\90\res\layout\contacts_view.xml
+LinearLayout;obj\Debug\90\res\layout\content_main.xml
+LinearLayout;obj\Debug\90\res\layout\equation_calculator.xml
+LinearLayout;obj\Debug\90\res\layout\help.xml
+LinearLayout;obj\Debug\90\res\layout\helpview.xml
+LinearLayout;obj\Debug\90\res\layout\list_view.xml
+LinearLayout;obj\Debug\90\res\layout\maps_view.xml
+LinearLayout;obj\Debug\90\res\layout\nav_header_main.xml
+ListView;obj\Debug\90\res\layout\contacts_view.xml
+ListView;obj\Debug\90\res\layout\content_main.xml
+menu;obj\Debug\90\res\menu\activity_main_drawer.xml
+menu;obj\Debug\90\res\menu\menu_main.xml
+path;obj\Debug\90\res\drawable\help.xml
+path;obj\Debug\90\res\drawable\info.xml
+path;obj\Debug\90\res\drawable\outline_calculate.xml
+path;obj\Debug\90\res\drawable\outline_map_24.xml
+path;obj\Debug\90\res\drawable\outline_person_24.xml
+path;obj\Debug\90\res\drawable-v21\ic_menu_camera.xml
+path;obj\Debug\90\res\drawable-v21\ic_menu_gallery.xml
+path;obj\Debug\90\res\drawable-v21\ic_menu_manage.xml
+path;obj\Debug\90\res\drawable-v21\ic_menu_send.xml
+path;obj\Debug\90\res\drawable-v21\ic_menu_share.xml
+path;obj\Debug\90\res\drawable-v21\ic_menu_slideshow.xml
+paths;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\49\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+RelativeLayout;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\range_navigator_layout.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\1\jl\res\values\strings.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\values\attrs.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\values\strings.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\values\attrs.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\values\strings.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\4\jl\res\values\attrs.xml
+resources;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\4\jl\res\values\strings.xml
+resources;obj\Debug\90\res\values\colors.xml
+resources;obj\Debug\90\res\values\dimens.xml
+resources;obj\Debug\90\res\values\drawables.xml
+resources;obj\Debug\90\res\values\ic_launcher_background.xml
+resources;obj\Debug\90\res\values\strings.xml
+resources;obj\Debug\90\res\values\styles.xml
+resources;obj\Debug\90\res\values-v21\styles.xml
+scale;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_scale_in.xml
+scale;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_scale_out.xml
+set;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_fade_in.xml
+set;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_fade_out.xml
+set;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_scale_in.xml
+set;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\anim\sfchart_scale_out.xml
+shape;obj\Debug\90\res\drawable\side_nav_bar.xml
+Spinner;obj\Debug\90\res\layout\equation_calculator.xml
+string;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\1\jl\res\values\strings.xml
+string;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\values\strings.xml
+string;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\values\strings.xml
+string;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\4\jl\res\values\strings.xml
+string;obj\Debug\90\res\values\strings.xml
+string-array;obj\Debug\90\res\values\strings.xml
+style;obj\Debug\90\res\values\styles.xml
+style;obj\Debug\90\res\values-v21\styles.xml
+syncfusion.sfdatagrid.ScrollViewer;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\3\jl\res\layout\scrollviewer.xml
+TextView;D:\Mobile Development\Exam\Labs\ExamProject\obj\Debug\90\lp\2\jl\res\layout\chart_legend_item.xml
+TextView;obj\Debug\90\res\layout\aboutme.xml
+TextView;obj\Debug\90\res\layout\contactlistitem.xml
+TextView;obj\Debug\90\res\layout\contacts_view.xml
+TextView;obj\Debug\90\res\layout\content_main.xml
+TextView;obj\Debug\90\res\layout\equation_calculator.xml
+TextView;obj\Debug\90\res\layout\help.xml
+TextView;obj\Debug\90\res\layout\helpview.xml
+TextView;obj\Debug\90\res\layout\list_view.xml
+TextView;obj\Debug\90\res\layout\nav_header_main.xml
+vector;obj\Debug\90\res\drawable\help.xml
+vector;obj\Debug\90\res\drawable\info.xml
+vector;obj\Debug\90\res\drawable\outline_calculate.xml
+vector;obj\Debug\90\res\drawable\outline_map_24.xml
+vector;obj\Debug\90\res\drawable\outline_person_24.xml
+vector;obj\Debug\90\res\drawable-v21\ic_menu_camera.xml
+vector;obj\Debug\90\res\drawable-v21\ic_menu_gallery.xml
+vector;obj\Debug\90\res\drawable-v21\ic_menu_manage.xml
+vector;obj\Debug\90\res\drawable-v21\ic_menu_send.xml
+vector;obj\Debug\90\res\drawable-v21\ic_menu_share.xml
+vector;obj\Debug\90\res\drawable-v21\ic_menu_slideshow.xml

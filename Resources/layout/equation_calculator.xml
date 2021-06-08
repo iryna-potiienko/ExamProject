@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:chart="clr-namespace:Syncfusion.SfChart;assembly=Syncfusion.SfChart"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linearLayout1">
+
+  <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "wrap_content"
+        android:layout_height=    "match_parent"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/equation_type"
+            android:layout_gravity="center_horizontal|right"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+    />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/equation_type"
+            android:layout_gravity="center_horizontal"
+    />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "match_parent"
+        >
+        <TextView
+            android:text="Enter k1: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/C1"
+            android:layout_marginRight="0.0dp"
+            android:gravity=    "center_horizontal" />
+        <EditText
+            android:inputType="number|numberSigned|numberDecimal"
+            android:id="@+id/Coef1"
+            android:layout_width="wrap_content"
+            android:text="1"
+            android:layout_height="wrap_content"
+            android:gravity=    "center_horizontal"/>
+        <TextView
+            android:text="Enter k2: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/C2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity=    "center_horizontal" />
+        <EditText
+            android:inputType="number|numberSigned|numberDecimal"
+            android:id="@+id/Coef2"
+            android:layout_width="wrap_content"
+            android:text="2"
+            android:layout_height="wrap_content"
+            android:gravity=    "center_horizontal"    
+            />
+        <TextView
+            android:text="Enter k3: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/C3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity=    "center_horizontal"    
+            />
+        <EditText
+            android:inputType="number|numberSigned|numberDecimal"
+            android:id="@+id/Coef3"
+            android:text="-6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity=    "center_horizontal"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "wrap_content"
+        >
+        <TextView
+            android:text="Enter interval [a; b]:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <EditText
+            android:inputType="number|numberDecimal|numberSigned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CoefficientA"
+            android:text="1" />
+        <EditText
+            android:inputType="number|numberSigned|numberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CoefficientB"
+            android:text="2" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ErrorInterval"
+            android:textColor="#ffeb3030" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "wrap_content"
+        >
+        <TextView
+            android:text="Enter epsilon:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Epsilon"
+            android:text="0.0001"
+            android:inputType="number|numberDecimal" />
+    </LinearLayout>
+
+    <Button
+        android:text="Calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CalculateButton"/>
+    <TextView
+        android:text="Results"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:gravity="center_horizontal|center_vertical" />
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "wrap_content"
+        >
+        <TextView
+            android:text="Dyhotomy:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/DyhotomyResult" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "match_parent"
+        >
+        <TextView
+            android:text="                  with "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wIt1" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:id="@+id/DyhotomyIterationsNumber"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" iterations "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/It1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "wrap_content"
+        >
+        <TextView
+            android:text="Modified Newton:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewM2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Method2" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "match_parent"
+        >
+        <TextView
+            android:text="                  with "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wIt2" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:id="@+id/ModNewtonIterationsNumber"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" iterations "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/It2" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "wrap_content"
+        >
+        <TextView
+            android:text="Newton:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewM3"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Method3" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "match_parent"
+        >
+        <TextView
+            android:text="                  with "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wIt3" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:id="@+id/NewtonIterationsNumber"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" iterations "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/It3" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation=    "horizontal"
+        android:layout_width=    "match_parent"
+        android:layout_height=    "wrap_content"
+        >
+        <Button
+            android:text="Clear All"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ClearAllButton"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginLeft="0.0dp" />
+        <Button
+            android:text="Read from file"
+            android:layout_width="149.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ReadButton"
+            android:layout_marginRight="0.0dp" />
+        <Button
+            android:text="@string/Visualization"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/PlotButton" />
+    </LinearLayout>
+</LinearLayout >

@@ -172,6 +172,64 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "Syncfusion.Licensing/19.1.0.66": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid90/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid90/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/19.1.0.66": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid90/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid90/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart.Android/19.1.0.66": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.66"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.SfChart.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.SfChart.Android.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfDataGrid.Android/19.1.0.66": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.66",
+          "Syncfusion.Xamarin.GridCommon": "19.1.0.66",
+          "Syncfusion.Xamarin.SfNumericTextBox.Android": "19.1.0.66"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.Linq.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfDataGrid.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.Linq.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfDataGrid.Android.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericTextBox.Android/19.1.0.66": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.66"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "compile": {
@@ -2671,6 +2729,101 @@
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.nuspec"
+      ]
+    },
+    "Syncfusion.Licensing/19.1.0.66": {
+      "sha512": "tEmJwSDnfSfa7UizXkTDsf/fwxChpjWT4fblxz4fNLQFr4hkhzR8GZ0LQvK91JwbHCiwJQgb37zM1i7uQgZEhg==",
+      "type": "package",
+      "path": "syncfusion.licensing/19.1.0.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net5.0/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.19.1.0.66.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.GridCommon/19.1.0.66": {
+      "sha512": "8I5OL0syt5stLRDF+HP9hbuYeDyVfDCTtgtf5VFucc6Ps/crkgrk5nQYc9lbIzg5PnFg4+Wv+yqHuGXc+JkNPA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.gridcommon/19.1.0.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/MonoAndroid90/Syncfusion.GridCommon.Portable.XML",
+        "lib/MonoAndroid90/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
+        "syncfusion.xamarin.gridcommon.19.1.0.66.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfChart.Android/19.1.0.66": {
+      "sha512": "5H0P2yqmiBlGlAyjzVs5ssaP+40yQB7SX8HN9iT6jPCp4cLyHEdT3XeBG60BslDWNiJ4Ncd0Hskim9kKU7Rojw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfchart.android/19.1.0.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfChart.Android.XML",
+        "lib/MonoAndroid10/Syncfusion.SfChart.Android.dll",
+        "syncfusion.xamarin.sfchart.android.19.1.0.66.nupkg.sha512",
+        "syncfusion.xamarin.sfchart.android.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfDataGrid.Android/19.1.0.66": {
+      "sha512": "eR9lyZRmBEkBvGhNhf+xlajzK8TNvEtNAFDsfjiINPir2La06ETENNS4z/tLc0tK3kqOdXDUPPwU4bi42VypcQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfdatagrid.android/19.1.0.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Linq.Android.XML",
+        "lib/MonoAndroid10/Syncfusion.Linq.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfDataGrid.Android.XML",
+        "lib/MonoAndroid10/Syncfusion.SfDataGrid.Android.dll",
+        "syncfusion.xamarin.sfdatagrid.android.19.1.0.66.nupkg.sha512",
+        "syncfusion.xamarin.sfdatagrid.android.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfNumericTextBox.Android/19.1.0.66": {
+      "sha512": "6sHXrMrulgqKxoZlh3bKr+BkJOkn5IDhBwV42AU97CteUPM4FIaj1xtMk/BStJqdEu934kI6sjT2sZyvXBfb2Q==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfnumerictextbox.android/19.1.0.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.Android.xml",
+        "syncfusion.xamarin.sfnumerictextbox.android.19.1.0.66.nupkg.sha512",
+        "syncfusion.xamarin.sfnumerictextbox.android.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -7285,6 +7438,8 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
+      "Syncfusion.Xamarin.SfChart.Android >= 19.1.0.66",
+      "Syncfusion.Xamarin.SfDataGrid.Android >= 19.1.0.66",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
       "Xamarin.Android.Support.Design >= 28.0.0.3",
@@ -7300,20 +7455,20 @@
   },
   "packageFolders": {
     "C:\\Users\\iryna\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj",
-      "projectName": "CarsDatabase",
-      "projectPath": "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj",
+      "projectUniqueName": "D:\\Mobile Development\\Exam\\Labs\\ExamProject\\ExamProject.csproj",
+      "projectName": "ExamProject",
+      "projectPath": "D:\\Mobile Development\\Exam\\Labs\\ExamProject\\ExamProject.csproj",
       "packagesPath": "C:\\Users\\iryna\\.nuget\\packages\\",
-      "outputPath": "D:\\Mobile Development\\CarsDatabase\\obj\\",
+      "outputPath": "D:\\Mobile Development\\Exam\\Labs\\ExamProject\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\iryna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7336,6 +7491,14 @@
     "frameworks": {
       "monoandroid90": {
         "dependencies": {
+          "Syncfusion.Xamarin.SfChart.Android": {
+            "target": "Package",
+            "version": "[19.1.0.66, )"
+          },
+          "Syncfusion.Xamarin.SfDataGrid.Android": {
+            "target": "Package",
+            "version": "[19.1.0.66, )"
+          },
           "Xamarin.Android.Support.Core.Utils": {
             "target": "Package",
             "version": "[28.0.0.3, )"

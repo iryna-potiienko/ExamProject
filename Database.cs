@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CarsDatabase
+namespace ExaminationProject
 {
     public class Database
     {
@@ -87,13 +87,13 @@ namespace CarsDatabase
         }
         //Delete Data Operation  
 
-        public bool removeTable(Car car)
+        public bool removeTable(int Id)
         {
             try
             {
                 using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, tableName)))
                 {
-                    connection.Delete(car);
+                    connection.Query<Car>("DELETE * FROM Car Where Id=?", Id);
                     return true;
                 }
             }

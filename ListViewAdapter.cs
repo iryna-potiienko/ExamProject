@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CarsDatabase
+namespace ExaminationProject
 {
     public class ViewHolder : Java.Lang.Object
     {

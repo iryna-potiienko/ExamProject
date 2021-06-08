@@ -1,4 +1,8 @@
 SQLitePCLRaw.lib.e_sqlite3.android
+Syncfusion.Linq.Android
+Syncfusion.SfChart.Android
+Syncfusion.SfDataGrid.Android
+Syncfusion.SfNumericTextBox.Android
 Xamarin.AndroidX.Activity
 Xamarin.AndroidX.Annotation
 Xamarin.AndroidX.Annotation.Experimental

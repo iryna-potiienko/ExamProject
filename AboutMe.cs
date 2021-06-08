@@ -1,10 +1,11 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Support.V7.App;
 
-namespace CarsDatabase
+namespace ExaminationProject
 {
-    [Activity(Label = "AboutMe")]
-    public class AboutMe : Activity
+    [Activity(Label = "About author")]
+    public class AboutMe : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

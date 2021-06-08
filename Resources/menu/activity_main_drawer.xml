@@ -13,9 +13,17 @@
             android:icon="@drawable/outline_map_24"
             android:title="Map" />
         <item
+            android:id="@+id/nav_equation_calculator"
+            android:icon="@drawable/outline_calculate"
+            android:title="Equation Calculator" />
+        <item
             android:id="@+id/nav_aboutMe"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/info"
             android:title="About author" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/help"
+            android:title="User Quide" />   
     </group>
 
 </menu>

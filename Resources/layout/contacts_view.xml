@@ -5,19 +5,6 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
     
-    <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-    </android.support.design.widget.AppBarLayout>
-    
     <TextView
             android:text="Contacts Book"
             android:layout_width="match_parent"
@@ -27,7 +14,7 @@
     <TextView
             android:text="Contacts end with number 7"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView3"
+            android:layout_height="wrap_content" android:id="@+id/textView4"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textAlignment="center"
             android:textAllCaps="false"/>
     

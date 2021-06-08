@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj": {}
+    "D:\\Mobile Development\\Exam\\Labs\\CarsDatabase\\CarsDatabase.csproj": {}
   },
   "projects": {
-    "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj": {
+    "D:\\Mobile Development\\Exam\\Labs\\CarsDatabase\\CarsDatabase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj",
+        "projectUniqueName": "D:\\Mobile Development\\Exam\\Labs\\CarsDatabase\\CarsDatabase.csproj",
         "projectName": "CarsDatabase",
-        "projectPath": "D:\\Mobile Development\\CarsDatabase\\CarsDatabase.csproj",
+        "projectPath": "D:\\Mobile Development\\Exam\\Labs\\CarsDatabase\\CarsDatabase.csproj",
         "packagesPath": "C:\\Users\\iryna\\.nuget\\packages\\",
-        "outputPath": "D:\\Mobile Development\\CarsDatabase\\obj\\",
+        "outputPath": "D:\\Mobile Development\\Exam\\Labs\\CarsDatabase\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\iryna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,14 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Syncfusion.Xamarin.SfChart.Android": {
+              "target": "Package",
+              "version": "[19.1.0.66, )"
+            },
+            "Syncfusion.Xamarin.SfDataGrid.Android": {
+              "target": "Package",
+              "version": "[19.1.0.66, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.3, )"
